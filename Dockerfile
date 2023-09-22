@@ -2,7 +2,7 @@ FROM ruby:3.1.2-alpine AS builder
   RUN apk add \
     build-base \
     postgresql-dev
-  COPY Gemfile* .
+  COPY Gemfile* ./
   RUN bundle install
    FROM ruby:3.1.2-alpine AS runner
   RUN apk add \
